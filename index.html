@@ -42,7 +42,7 @@
     </div>
 </nav>
 
-  <div class="custom-scroll">
+ 
     <main>
         <section id="home">
             <div class="intro">
@@ -65,7 +65,7 @@
       
            </div>
         </section>
-        <section class="about" id="about">
+        <section class="about" >
             <div class="about-text">
                 <p> Welcome to my website! I'm Clifford Xing.
                 </p>
@@ -74,20 +74,15 @@
                   I am a computer science student at the University of Waterloo and a software developer.
                 </p>
     
-    
-                <p>
-                    Feel free to check out some of my projects below (or by clicking here)
-                </p>
-    
                 <p>
                     If you have any further questions,
-                    do not hesitate to contact me!
+                   feel free to reach
                 </p>
             </div>
            
         </section>
     
-        <section class="about-me-section">
+        <section class="about-me-section" id="about">
             <div class="about-me-container">
               <div class="profile-picture">
                 <img src="assets/square-profile copy.jpg" alt="Your Profile Picture">
@@ -129,83 +124,72 @@
             </div>
         </section>
         <section id="projects-section">
-    
-            <div class="project-container">
-                <h3 class="header2">Projects</h3>
-    
-                <div class="slideshow-container">
-                    <div class="slide">
-                        
-                        <img class="slide-image" src="assets/profitrunner.png">
-                        <div>
-                            <h3>Profit Runner</h3>
-                            <p class="slide-text">Using Flutter (Dart) and Firebase, Profit Runner is a mobile app 
-                                helping users track their inventory and profit effectively! Download now.
-                            </p>
-                        </div>
-                        
-                    </div>
-    
-                    <div class="slide">
-    
-                        <img class="slide-image" src="assets/castledefense1.png">
-                        <div>
-                            <h3>Castle Defense</h3>
-                       
-                        <p class="slide-text">Using Java (Greenfoot), Castle Defense is a wave defense game developed with 
-                            object oriented programming (the graphics are custom made as well!). Want to play? Try
-                            it here!
-                        </p>
-                        </div>
-                        
-                    </div>
-    
-                    <div class="slide">
-                       
-                        <img class="slide-image" src="assets/virtualbank.png">
-                        <div>
-                            <h3>Metaverse Bank</h3>
-    
-                            <p class="slide-text"> Using Lua and the help of Finastra's FFDC APIs, the Metaverse Bank project is a virtual
-                                interface that generates client banking profiles for Finastra. Check it out here!
-                            </p>
-                        </div>
-    
-                       
-                    </div>
-                    <div class="slide">
-                       
-    
-                        <div>
-                            <h3>Let Us Cook!</h3>
-                            <p class="slide-text">Using React, Let Us Cook! is a mobile app and web application powered by AI
-                                that generates cooking recipes for users based off of their pantry supply! The official
-                                launch is scheduled for the end of 2023.
-                            </p>
-                        </div>
-                       
-                    </div>
-                    <div class="slide">
-                       
-                        <img class="slide-image" src="assets/vantagelogo.png">
-                        <div>
-                            <h3>Vantage Horizons</h3>
-    
-                        <p class="slide-text"> As a founder and lead software engineer, I am responsible for the creation
-                            and upkeep of the full stack development of Vantage Agency's 
-                            website (public website available soon)!
-                            
-                        </p>
-                        </div>
-                        
-                    </div>
-    
-                 
-                    <!-- Add more slides as needed -->
+
+         
+                <h2 class="projects-header"> My Projects </h2>
+            
+          
+         
+                <div class="project-panel">
+                    <p> Expand then click the cards to view the project</p>
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
+            
+
+           
+               
+                <div class="wrapper">
+              
+                    <div class="container">
+                       
+                        <input type="radio" name="slide" id="c1" checked>   
+                    
+                            <label for="c1" class="card" id="L1">
+                                    <div class="row">
+                                        <div class="icon">1</div>
+                                        <div class="description">
+                                           
+                                            <h4>Let Us Cook!</h4>
+                                            <p>Artifical-intelligence based application that generates cooking recipes</p>
+                                        </div>
+                                    </div>
+                            </label>
+                        
+                        <input type="radio" name="slide" id="c2" >
+                        <label for="c2" class="card" id ="L2">
+                            <div class="row">
+                                <div class="icon">2</div>
+                                <div class="description">
+                                    <h4>Profit Runner</h4>
+                                    <p>Mobile app that helps track inventory and profits for new and growing businesses.</p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c3" >
+                        <label for="c3" class="card" id="L3">
+                            <div class="row">
+                                <div class="icon">3</div>
+                                <div class="description">
+                                    <h4>Metaverse Bank</h4>
+                                    <p>Virtual bank in metaverse that generates user profiles to Finastra's database.</p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c4" >
+                        <label for="c4" class="card" id="L4">
+                            <div class="row">
+                                <div class="icon">4</div>
+                                <div class="description">
+                                    <h4>Castle Defense</h4>
+                                    <p>Endless wave defense game made using Java (greenfoot)</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+       
+            
+          
+          
             
         </section>
     
@@ -246,7 +230,7 @@
     
         <script src = "app.js" ></script>
       </main>
-  </div>
+
   
     
 
