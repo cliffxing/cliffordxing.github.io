@@ -10,13 +10,14 @@
 body{
 height: 100%;
 margin: 0;
+
 }
 
 main {
   height: 100vh;
   overflow: scroll;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
+
   scroll-behavior: smooth;
   position: fixed;
   top: 0;
@@ -53,9 +54,7 @@ section {
 }
 
 @media screen and (max-width: 800px) {
-  section{
-    scroll-snap-align: unset;
-  }
+ 
 }
 
 html{
@@ -126,7 +125,7 @@ html{
 color: white;
 text-transform: uppercase;
 text-decoration: none;
-letter-spacing: 0.15rem;
+letter-spacing: 0rem;
 display: inline-block;
 padding: 2rem;
 position: relative;
@@ -401,159 +400,57 @@ h2{
 }
 
 
-
-
-
-
 /* ------------------------------------------------------------------------------------------------------ */
 /* About */
 
-.about {
-  background-color: black;
-  color: white; /* Set text color to white for contrast */
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  /* Set initial styles for the hidden state */
-  
- 
+h3{
+  font-size: 2.3rem;
 }
-
-.about-text{
-  width: 50%;
-  font-size: 1.8rem;
-}
-
-.about-text p {
-  margin-bottom: 40px;
-}
-
-.about-text {
-  /* Set initial styles for the hidden state */
-  opacity: 0;
-  transform: translateY(70px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.about.active .about-text {
-  /* Apply animation to the text when the section is in view */
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media screen and (max-width: 500px) {
- .about-text{
-  font-size: 15px;
- }
-  }
-
-
-/* ------------------------------------------------------------------------------------------------------ */
-/* More about */
 
 .about-me-section {
   background-color: black;
   color: white;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
 }
 
-.about-me-container {
-  width: 95%;
-  display: flex;
-  flex-direction: row; /* Arrange items horizontally */
-  justify-content: center;
-  align-items: flex-start; /* Align items to the top */
-}
-
-.profile-picture {
-
-  padding: 20px;
-
-}
-
-.profile-picture img {
-  max-width: 100%;
-  border-radius: 50px;
-  transition: transform 1.5s ease;
- margin-bottom: 3rem;
-}
-
-
-
-.about-me-section.active .profile-picture img {
-  transform: scale(1.2); /* Adjust the scale factor as needed */
-}
-
-.about-me-content {
-  width: 45%;
-  max-width: 800px;
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the top */
-  margin-left: 6rem;
-
-}
-
-
-.header {
-  font-size: 2.5rem;
-  color: white;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 2rem;
-}
-
-
-.header::before {
-  content: "";
-  position: absolute;
-  width: 80%;
-  height: 3px;
-  background-color: white;
-  bottom: 0;
-  left: 0;
-  border-radius: 5px;
-  margin-top: 2px;
-}
-
-.about-me-paragraph {
-  margin-top: 10px;
-  font-size: 1.3rem;
-  color: gray;
+.about-wrapper{
   text-align: left;
-  opacity: 0;
-  transition: opacity 1s ease-in;
+  max-width: 40%;
 }
 
-.about-me-section.active .about-me-paragraph {
-  opacity: 1;
+
+.about-me-paragraph{
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
 }
 
+.profile-picture{
+  padding: 5rem;
+}
+
+.profile-picture img{
+  width: 20rem;
+  border-radius: 20px;
+}
+.buttoncontain{
+    
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center vertically if needed */
+  margin-top: 10px; /* Adjust the margin as needed */
+}
 
 .fa {
-  padding: 12px;
+  padding: 8px;
   font-size: 20px;
   border-radius: 0.8rem;
   margin: 0;
   }
 
-  .buttoncontain{
-    
-    display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    align-items: center; /* Center vertically if needed */
-    margin-top: 10px; /* Adjust the margin as needed */
-  }
-  
-
-  .fa-linkedin {
+.fa-linkedin {
   background: #007bb5;
   color: white;
   }
@@ -563,7 +460,6 @@ h2{
   color: white;
   }
 
-  
 .social-button {
   display: flex; /* Add this to align button contents */
   margin: 0 5px; /* Add space between the buttons */
@@ -578,75 +474,35 @@ h2{
   transition: 0.5s smooth;
 }
 
-
-
-@media screen and (max-width: 800px) {
-  .profile-picture img {
-    max-width: 40%;
-    border-radius: 10px;
-    margin-top: 100px;
-    margin-bottom: 0rem;
+@media (max-width: 768px) {
+    .about-me-section {
+      flex-direction: column; /* Change to column layout on smaller screens */
+      height: auto; /* Allow the section to expand vertically as needed */
+      padding: 20px; /* Add padding for spacing */
   }
 
-  .profile-picture {
-    
-    margin-left: 130px;
-  
+  .profile-picture,
+  .about-wrapper {
+     margin-top: 20px;
+      text-align: center; /* Center align both image and text on smaller screens */
+      width: 100%; /* Full width for both image and text */
+      max-width: none; /* Remove max-width to allow full width */
+      padding: 0; /* Remove padding to avoid excessive spacing */
   }
 
-  .about-me-paragraph {
-    margin-top: 10px;
-    font-size: 12px;
-    color: gray;
-    text-align: left;
+  .about-wrapper {
+      margin-top: 20px; /* Add some margin between image and text */
   }
 
-  .about-me-content {
-    align-items: center;
-    margin-top: 0rem;
-    margin-left: 0rem;
+  .about-me-paragraph{
+    margin-top: 0.5rem;
+    padding: 15px;
+    font-size: 1rem;
   }
+}
 
-  .about-me-container {
-      width: 95%;
-      display: flex;
-      flex-direction: column; /* Arrange items horizontally */
-      justify-content: center;
-      align-items: center;
-    }
-   
-    .header {
-      font-size: 30px;
-      color: white;
-      position: relative;
-      display: inline-block;
-      margin-bottom: 2rem;
-    }
 
-    .header::before {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 3px;
-      background-color: white;
-      bottom: 0;
-      left: 0;
-      border-radius: 5px;
-      margin-top: 2px;
-    }
 
-    .fa {
-      padding: 12px;
-      font-size: 20px;
-      border-radius: 0.8rem;
-      margin: 0;
-      visibility: hidden;
-      }
-    
-   
-  
-  }
-  
 
 
    
@@ -654,184 +510,123 @@ h2{
   /* ------------------------------------------------------------------------------------------------------ */
 /*Projects*/
 
-#projects-section {
-background-color: black;
-height: 100vh;
-overflow: hidden;
-position: relative;
-text-align: center; /* Center align text */
-color: white;
-display: flex;
-flex-direction: column; /* Align title and slideshow vertically */
-align-items: center;
-}
-
-.projects-header{
-font-size: 2.5rem;
-}
-
-.projects-header2{
-margin-top: 1rem;
-font-size: 0.8rem;
-}
-
-
-
-.wrapper {
-width: 100%;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-
-}
-
-.container {
-height: 400px;
-display: flex;
-flex-wrap: nowrap;
-justify-content: start;
-
-}
-
-.card {
-padding-top: 0rem;
-margin-top: 0rem;
-width: 78px;
-border-radius: .75rem;
-background-size:cover;
-cursor: pointer;
-overflow: hidden;
-border-radius: 2rem;
-margin: 0 10px;
-display: flex;
-align-items: flex-end;
-transition: .6s cubic-bezier(.28,-0.03,0,.99);
-box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-}
-
-.card > .row {
-padding-top: 0rem;
-margin-top: 0rem;
-color: white;
-display: flex;
-flex-wrap: nowrap;
-}
-
-.card > .row > .icon {
-padding-top: 0rem;
-margin-top: 0rem;
-background: #223;
-color: white;
-border-radius: 50%;
-width: 50px;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 15px;
-}
-
-.card > .row > .description {
-padding-top: 0rem;
-margin-top: 0rem;
-display: flex;
-justify-content: center;
-flex-direction: column;
-overflow: hidden;
-height: 80px;
-width: 520px;
-opacity: 0;
-transform: translateY(0px);
-transition-delay: .1;
-transition: all .3s ease;
-}
-
-.description p {
-color: white;
-opacity: 1;
-padding-top: 5px;
-}
-
-.description h4 {
-text-transform: uppercase;
-}
-
-input {
-display: none;
-}
-
-input:checked + label {
-width: 600px;
-}
-
-input:checked + label .description {
-opacity: 1 !important;
-transform: translateY(0) !important;
-}
-
-.card[for="c1"] {
-background-image: url('assets/backgroundkitchen.jpg');
-
-}
-.card[for="c2"] {
-background-image: url('assets/prLogo.jpg');
-}
-.card[for="c3"] {
-background-image: url('assets/metaversebank.jpg');
-}
-.card[for="c4"] {
-background-image: url('assets/nightcast.jpg');
-}
-
-.instructions-box{
-margin-bottom: 5rem;
-}
-
-.project-panel{
-align-items: center;
-margin-top: 13rem;
-}
-
-@media screen and (max-width: 800px) {
-
-#projects-section {
-  height: 150vh;
-}
-
-.container{
-  flex-direction: column;
-  max-width: 500px;
-}
-
-.card {
-  padding-top: 0rem;
-  margin-top: 0rem;
-  width: 100px;
-  border-radius: .75rem;
-  background-size:cover;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin: 0 10px;
+.project-section{
+  height: auto;
+  background-color: black;
   display: flex;
-  align-items: flex-end;
-  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+
+.project-wrapper{
+  margin-top: 8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.project-wrapper h4{
+ color: white;
+ font-size: 2rem;
+
+ margin-bottom: 3rem;
+
+}
+
+.card-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px; /* Adjust the gap between cards */
+}
+
+.card-container {
+  background-color: black; /* Changed background color to black */
+  border-radius: 15px;
+  border: 2px groove rgba(255, 255, 255, 0.2); /* Added white border */
+  color: white; /* Changed text color to white */
+  padding-top: 30px;
+  position: relative;
+  width: 375px;
+  max-width: 100%;
+  text-align: center;
+  transition: border 0.7s ease;
+}
+
+.card-container:hover {
+  border: 2px groove white; /* Added white border */
+}
+
+.card-container h3{
+ font-size: 1.2rem;
+ margin-top: 2rem;
+}
+
+.card-text{
+  padding: 10px;
+}
+
+.card-contents{
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+.card-container img{
+  height: 180px;
+  border-radius: 15px;
+}
+
+.skills {
+	background-color: black;
+	text-align: left;
+	padding: 15px;
+  border-radius: 15px;
+	margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.skills ul {
+	list-style-type: none;
+	margin-top: 0.5rem;
+	padding: 0;
+}
+
+.skills h6{
+  font-size: 1rem;
+}
+
+.skills ul li {
+	border: 1px solid #779ECB;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+}
+
+.card-button{
   
+  margin-top: 1rem;
+  margin: 0.2rem;
+display: inline-block;
+padding: 15px 25px;
+font-size: 16px;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+border-radius: 6px;
+background-color: black;
+border: 1px solid #779ECB;
+color: white;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+.card-button:hover{
+  background-color: white;
+  color: black;
 }
 
-.description p {
-  text-align: left;
-  color: white;
-  opacity: 1;
-  padding-top: 5px;
-  font-size: 8px;
-}
-
-
-
-
-
-}
 
 
 
@@ -847,12 +642,9 @@ font-size: 2.4rem;
   text-decoration: underline;
 }
 
-
-
-
 h5{
-color: white;
-font-size: 5rem;
+  color: white;
+  font-size: 5rem;
 }
 
 /* Base button styles */
@@ -873,7 +665,7 @@ transition: background-color 0.8s ease, color 0.8s ease;
 
 /* Button hover styles */
 .emailbutton:hover {
-background-color: white;
-color: black;
+  background-color: white;
+  color: black;
 }
 

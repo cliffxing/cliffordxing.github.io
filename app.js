@@ -9,30 +9,6 @@ const options = {
   threshold: 0.9, // Trigger animation when 20% of the section is in view
 };
 
-document.getElementById('L1').addEventListener('click', function(event) {
-    if (event.target.classList.contains('card') && document.getElementById('c1').checked) {
-        window.open('https://letuscook.ca/', '_blank');
-    }
-});
-
-document.getElementById('L2').addEventListener('click', function(event) {
-    if (event.target.classList.contains('card') && document.getElementById('c2').checked) {
-        window.open('https://apps.apple.com/ca/app/profit-runner/id1549559750/', '_blank');
-    }
-});
-
-document.getElementById('L3').addEventListener('click', function(event) {
-    if (event.target.classList.contains('card') && document.getElementById('c3').checked) {
-        window.open('https://devpost.com/software/fusion-roblox', '_blank');
-    }
-});
-
-
-document.getElementById('L4').addEventListener('click', function(event) {
-    if (event.target.classList.contains('card') && document.getElementById('c4').checked) {
-        window.open('https://www.greenfoot.org/scenarios/27314', '_blank');
-    }
-});
 
 
 
